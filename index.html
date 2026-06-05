@@ -15,9 +15,25 @@
     />
     <meta property="og:image" content="./logo-ax.png" />
     <link rel="icon" type="image/png" href="./logo-ax.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://mail.google.com;"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="camera=(), microphone=(), geolocation=(), payment=()"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
+      crossorigin="anonymous"
     />
     <style>
       :root {
@@ -64,6 +80,17 @@
         min-height: 100vh;
         overflow-x: hidden;
         cursor: default;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      input,
+      textarea {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
       }
 
       /* ─── CANVAS BACKGROUND ─── */
@@ -301,12 +328,17 @@
         font-size: 0.95rem;
         color: var(--text);
         outline: none;
-        transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+        transition:
+          border-color 0.3s,
+          box-shadow 0.3s,
+          background-color 0.3s;
       }
       .search-wrapper:focus-within .search-input {
         background: rgba(8, 24, 48, 0.9);
         border-color: var(--cyan);
-        box-shadow: 0 0 0 4px rgba(0, 240, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.5);
+        box-shadow:
+          0 0 0 4px rgba(0, 240, 255, 0.1),
+          0 8px 32px rgba(0, 0, 0, 0.5);
       }
       .search-icon-btn {
         position: absolute;
@@ -322,7 +354,9 @@
         justify-content: center;
         padding: 8px;
         border-radius: 8px;
-        transition: color 0.2s, background-color 0.2s;
+        transition:
+          color 0.2s,
+          background-color 0.2s;
       }
       .search-wrapper:focus-within .search-icon-btn {
         color: var(--cyan);
@@ -944,8 +978,19 @@
             class="search-input"
             placeholder="Search tools..."
           />
-          <button class="search-icon-btn" onclick="document.getElementById('search-input').focus()" aria-label="Search">
-            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <button
+            class="search-icon-btn"
+            onclick="document.getElementById('search-input').focus()"
+            aria-label="Search"
+          >
+            <svg
+              width="18"
+              height="18"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
               <circle cx="11" cy="11" r="8"></circle>
               <path d="M21 21l-4.35-4.35"></path>
             </svg>
@@ -953,8 +998,6 @@
         </div>
         <div class="tools-counter-container">
           Total Tools Ready: <span id="active-count">0</span>
-        </div>
-      </div>
         </div>
       </div>
     </section>
@@ -1011,6 +1054,45 @@
                   <path d="M7 17L17 7M17 7H7M17 7v10" />
                 </svg>
               </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── TOOL AKTIF: Konverter Terbilang ─── -->
+        <div
+          class="card-wrapper"
+          data-name="konverter terbilang angka kata rupiah"
+        >
+          <div class="card card-active">
+            <div class="card-corner"></div>
+            <div class="card-header">
+              <div class="card-icon icon-active">🔢</div>
+              <div class="card-meta">
+                <div class="card-name">Konverter Terbilang</div>
+                <span class="card-status status-live">Ready</span>
+              </div>
+            </div>
+            <p class="card-desc">
+              Konversi angka ke teks terbilang secara real-time. Support format
+              Rupiah, multi-bahasa, dan pilihan format teks penulisan.
+            </p>
+            <div class="card-footer">
+              <a
+                href="https://aionyxprime9999.github.io/konverter-terbilang/"
+                class="btn-launch"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open
+                <svg
+                  width="14"
+                  height="14"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M7 17L17 7M17 7H7M17 7v10" /></svg
+              ></a>
             </div>
           </div>
         </div>
@@ -1076,13 +1158,28 @@
                 id="req-name"
                 type="text"
                 placeholder="Nama Tool"
+                maxlength="80"
+                autocomplete="off"
+                spellcheck="false"
               />
               <textarea
                 class="request-textarea"
                 id="req-desc"
                 placeholder="Deskripsi"
+                maxlength="500"
               ></textarea>
-              <button class="btn-request" onclick="submitRequest()">
+              <input
+                type="text"
+                id="req-hp"
+                style="display: none; position: absolute; left: -9999px"
+                tabindex="-1"
+                autocomplete="off"
+              />
+              <button
+                class="btn-request"
+                id="btn-request"
+                onclick="submitRequest()"
+              >
                 <svg
                   width="15"
                   height="15"
@@ -1093,7 +1190,7 @@
                 >
                   <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
-                Kirim Usulan
+                <span id="btn-request-label">Kirim Usulan</span>
               </button>
             </div>
           </div>
@@ -1248,32 +1345,15 @@
       const activeCountSpan = document.getElementById("active-count");
 
       function updateDynamicCounter() {
-        const visibleReadyTools = [...wrappers].filter(w => {
+        const visibleReadyTools = [...wrappers].filter((w) => {
           const isHidden = w.classList.contains("hidden");
-          const isLive = w.querySelector('.status-live');
+          const isLive = w.querySelector(".status-live");
           return !isHidden && isLive;
         }).length;
-        
+
         if (activeCountSpan) activeCountSpan.textContent = visibleReadyTools;
       }
       updateDynamicCounter();
-
-      searchInput.addEventListener("input", () => {
-        const q = searchInput.value.toLowerCase().trim();
-        let found = 0;
-
-        wrappers.forEach((w) => {
-          const name = (w.dataset.name || "").toLowerCase();
-          const match = !q || name.includes(q);
-          w.classList.toggle("hidden", !match);
-          if (match) found++;
-        });
-
-        if (emptyState) {
-          emptyState.classList.toggle("show", found === 0);
-        }
-        updateDynamicCounter();
-      });
 
       // ─── TOAST ───
       function showToast(msg) {
@@ -1283,14 +1363,48 @@
         setTimeout(() => t.classList.remove("show"), 3000);
       }
 
+      // ─── SANITIZE ───
+      function sanitizeInput(str) {
+        return str
+          .replace(/[<>'"]/g, "")
+          .replace(/javascript:/gi, "")
+          .replace(/on\w+=/gi, "")
+          .trim();
+      }
+
+      // ─── OBFUSCATED EMAIL ───
+      function getEmail() {
+        return ["zechronaio", "nyx1748", "@gmail.com"].join("");
+      }
+
+      // ─── RATE LIMIT ───
+      let lastSubmit = 0;
+      const COOLDOWN = 30000;
+
       // ─── REQUEST SUBMIT ───
       function submitRequest() {
-        const name = document.getElementById("req-name").value.trim();
-        const desc = document.getElementById("req-desc").value.trim();
+        const hp = document.getElementById("req-hp").value;
+        if (hp) return;
+
+        const now = Date.now();
+        if (now - lastSubmit < COOLDOWN) {
+          const sisa = Math.ceil((COOLDOWN - (now - lastSubmit)) / 1000);
+          showToast(`⏳ Tunggu ${sisa} detik lagi ya...`);
+          return;
+        }
+
+        const name = sanitizeInput(
+          document.getElementById("req-name").value,
+        ).substring(0, 80);
+        const desc = sanitizeInput(
+          document.getElementById("req-desc").value,
+        ).substring(0, 500);
+
         if (!name) {
           showToast("⚠ Nama tool-nya diisi dulu dong...");
           return;
         }
+
         const subject = encodeURIComponent("💡 Usulan Tool Baru: " + name);
         const body = encodeURIComponent(
           "Halo Zech!\n\nAku punya ide tool baru buat Aionyx Hub:\n\n" +
@@ -1302,15 +1416,31 @@
             "\n\n" +
             "— Dikirim dari Aionyx Hub",
         );
+
         window.open(
-          "https://mail.google.com/mail/?view=cm&to=zechronaionyx1748@gmail.com&su=" +
+          "https://mail.google.com/mail/?view=cm&to=" +
+            getEmail() +
+            "&su=" +
             subject +
             "&body=" +
             body,
           "_blank",
+          "noopener,noreferrer",
         );
+
         document.getElementById("req-name").value = "";
         document.getElementById("req-desc").value = "";
+        lastSubmit = Date.now();
+
+        const btn = document.getElementById("btn-request");
+        const label = document.getElementById("btn-request-label");
+        btn.disabled = true;
+        label.textContent = "Terkirim ✓";
+        setTimeout(() => {
+          btn.disabled = false;
+          label.textContent = "Kirim Usulan";
+        }, COOLDOWN);
+
         showToast("✓ Gmail terbuka — tinggal klik Kirim!");
       }
 
@@ -1318,6 +1448,81 @@
       document.getElementById("req-desc").addEventListener("keydown", (e) => {
         if (e.key === "Enter" && e.ctrlKey) submitRequest();
       });
+
+      // ─── DEBOUNCE SEARCH ───
+      let searchDebounce = null;
+      searchInput.addEventListener("input", () => {
+        clearTimeout(searchDebounce);
+        searchDebounce = setTimeout(() => {
+          const q = searchInput.value.toLowerCase().trim();
+          let found = 0;
+          wrappers.forEach((w) => {
+            const name = (w.dataset.name || "").toLowerCase();
+            const match = !q || name.includes(q);
+            w.classList.toggle("hidden", !match);
+            if (match) found++;
+          });
+          if (emptyState) emptyState.classList.toggle("show", found === 0);
+          updateDynamicCounter();
+        }, 150);
+      });
+
+      // ─── DISABLE KLIK KANAN ───
+      document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+      // ─── DISABLE COPY & SELECT (kecuali di input/textarea) ───
+      document.addEventListener("copy", (e) => {
+        if (!e.target.closest("input, textarea")) e.preventDefault();
+      });
+      document.addEventListener("cut", (e) => {
+        if (!e.target.closest("input, textarea")) e.preventDefault();
+      });
+      document.addEventListener("selectstart", (e) => {
+        if (!e.target.closest("input, textarea")) e.preventDefault();
+      });
+
+      // ─── DISABLE DRAG (screenshot via drag) ───
+      document.addEventListener("dragstart", (e) => e.preventDefault());
+
+      // ─── DISABLE KEYBOARD SHORTCUT ───
+      document.addEventListener("keydown", (e) => {
+        const k = e.key;
+        const ctrl = e.ctrlKey || e.metaKey;
+        const shift = e.shiftKey;
+        if (k === "F12") {
+          e.preventDefault();
+          return;
+        }
+        if (ctrl && k === "u") {
+          e.preventDefault();
+          return;
+        }
+        if (ctrl && k === "s") {
+          e.preventDefault();
+          return;
+        }
+        if (ctrl && k === "p") {
+          e.preventDefault();
+          return;
+        }
+        if (ctrl && k === "a") {
+          e.preventDefault();
+          return;
+        }
+        if (ctrl && k === "c") {
+          e.preventDefault();
+          return;
+        }
+        if (ctrl && shift && ["i", "j", "c"].includes(k.toLowerCase())) {
+          e.preventDefault();
+          return;
+        }
+      });
+
+      // ─── REGISTER SW ───
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js").catch(() => {});
+      }
     </script>
   </body>
 </html>
