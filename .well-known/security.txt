@@ -1,0 +1,5 @@
+Contact: mailto:zechronaionyx1748@gmail.com
+Expires: 2026-12-31T00:00:00z
+Preferred-Languages: id, en
+Canonical: https://aionyx-labs.github.io/.well-known/security.txt
+Policy: https://aionyx-labs.github.io/
