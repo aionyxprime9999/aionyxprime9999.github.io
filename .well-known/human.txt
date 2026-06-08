@@ -1,0 +1,13 @@
+/* TEAM */
+Developer & Designer: Zechron Aionyx
+Contact: zechronaionyx1748 [at] gmail [dot] com
+Location: Indonesia
+
+/* SITE */
+Last update: 2026
+Language: Indonesian / English
+Standards: HTML5, CSS3, Vanilla JS
+Components: Google Fonts (Poppins), GitHub Pages
+
+/* THANKS */
+Built with ☕ & late night focus.
