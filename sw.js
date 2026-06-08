@@ -1,4 +1,4 @@
-const CACHE_NAME = "ax-hub-v3";
+const CACHE_NAME = "ax-hub-v4";
 const ALLOWED_ORIGINS = [
   "https://fonts.googleapis.com",
   "https://fonts.gstatic.com",
@@ -9,7 +9,16 @@ self.addEventListener("install", (e) => {
   e.waitUntil(
     caches
       .open(CACHE_NAME)
-      .then((cache) => cache.addAll(["./logo-ax.png", "./manifest.json"])),
+      .then((cache) =>
+        cache.addAll([
+          "./index.html",
+          "./app.js",
+          "./offline.html",
+          "./logo-ax.png",
+          "./favicon.png",
+          "./manifest.json",
+        ]),
+      ),
   );
 });
 
@@ -30,7 +39,11 @@ self.addEventListener("fetch", (e) => {
   const isFont = ALLOWED_ORIGINS.some((o) => e.request.url.startsWith(o));
   const isStaticAsset =
     e.request.url.includes("logo-ax.png") ||
-    e.request.url.includes("manifest.json");
+    e.request.url.includes("manifest.json") ||
+    e.request.url.includes("app.js") ||
+    e.request.url.includes("favicon.png") ||
+    e.request.url.includes("index.html") ||
+    e.request.url.includes("offline.html");
 
   if (isFont || isStaticAsset) {
     e.respondWith(
@@ -45,5 +58,5 @@ self.addEventListener("fetch", (e) => {
     );
     return;
   }
-  e.respondWith(fetch(e.request));
+  e.respondWith(fetch(e.request).catch(() => caches.match("./offline.html")));
 });
