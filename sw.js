@@ -1,4 +1,4 @@
-const CACHE_NAME = "ax-hub-v5";
+const CACHE_NAME = "ax-hub-v6";
 const ALLOWED_ORIGINS = [
   "https://fonts.googleapis.com",
   "https://fonts.gstatic.com",
