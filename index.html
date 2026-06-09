@@ -133,11 +133,14 @@
         background: rgba(14, 100, 180, 0.03) !important;
         border-color: rgba(14, 100, 180, 0.15) !important;
       }
-      [data-theme="light"] #version-box .log-v111 {
+      [data-theme="light"] #version-box .log-v112 {
         color: #0d1f35 !important;
       }
-      [data-theme="light"] #version-box .log-v110 {
+      [data-theme="light"] #version-box .log-v111 {
         color: #2a5070 !important;
+      }
+      [data-theme="light"] #version-box .log-v110 {
+        color: #5a7a98 !important;
       }
       [data-theme="light"] #version-box .log-v109 {
         color: #2a5070 !important;
@@ -1393,8 +1396,17 @@
             <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; text-align: center;">System Ledger / Version History</div>
             <div id="version-box" style="display: flex; flex-direction: column; gap: 24px; font-family: var(--font-mono); font-size: 0.78rem; max-width: 680px; max-height: 260px; overflow-y: auto; margin: 0 auto; line-height: 1.6; background: rgba(4, 14, 30, 0.3); border: 1px solid var(--border); border-radius: 12px; padding: 20px; padding-right: 24px;">
               <div>
-                <div style="color: var(--neon); font-weight: 700; margin-bottom: 6px;">[ v1.11 ] — Visitor Telemetry Integration</div>
-                <ul class="log-v111" style="list-style-type: square; margin-left: 20px; color: var(--text); display: flex; flex-direction: column; gap: 4px;">
+                <div style="color: var(--neon); font-weight: 700; margin-bottom: 6px;">[ v1.12 ] — Cross-Tool Visitor Pipeline Expansion</div>
+                <ul class="log-v112" style="list-style-type: square; margin-left: 20px; color: var(--text); display: flex; flex-direction: column; gap: 4px;">
+                  <li>Propagated Firebase total_views increment across all 3 external tool nodes — generator-lj, konverter-terbilang, compress-zjpg.</li>
+                  <li>Migrated generator-lj Firebase instance from deprecated generator-lj-rtdb to unified aionyx-hub-rtdb project.</li>
+                  <li>Stripped version display tags from all external tool interfaces — version tracking centralized exclusively to portal.</li>
+                  <li>Patched CSP headers on generator-lj and konverter-terbilang to authorize aionyx-hub Firebase domain endpoints.</li>
+                </ul>
+              </div>
+              <div>
+                <div style="color: var(--cyan); font-weight: 700; margin-bottom: 6px;">[ v1.11 ] — Visitor Telemetry Integration</div>
+                <ul class="log-v111" style="list-style-type: square; margin-left: 20px; color: var(--text-dim); display: flex; flex-direction: column; gap: 4px;">
                   <li>Deployed centralized cross-node visitor telemetry pipeline via Firebase Realtime Database under isolated aionyx-hub project instance.</li>
                   <li>Integrated unified total_views counter accumulator across all active tool nodes — portal, generator-lj, konverter-terbilang, compress-zjpg.</li>
                   <li>Mounted live visitor badge indicator inline within Tools Collection section label header.</li>
@@ -1737,7 +1749,7 @@
           <div class="footer-col">
             <h3 class="footer-title">System</h3>
             <ul class="footer-links">
-              <li>📦 Version <span>v1.11</span></li>
+              <li>📦 Version <span>v1.12</span></li>
               <li>🛠 Status <span style="color: var(--cyan)">Active</span></li>
               <li>🌐 Independent Host</li>
               <li>🔒 No Trackers / Ads</li>
