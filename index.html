@@ -18,7 +18,7 @@
     <link rel="manifest" href="./manifest.json" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://mail.google.com;"
+      content="default-src 'self' https://www.gstatic.com; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://mail.google.com https://aionyx-hub-default-rtdb.asia-southeast1.firebasedatabase.app wss://aionyx-hub-default-rtdb.asia-southeast1.firebasedatabase.app;"
     />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
@@ -133,8 +133,11 @@
         background: rgba(14, 100, 180, 0.03) !important;
         border-color: rgba(14, 100, 180, 0.15) !important;
       }
-      [data-theme="light"] #version-box .log-v110 {
+      [data-theme="light"] #version-box .log-v111 {
         color: #0d1f35 !important;
+      }
+      [data-theme="light"] #version-box .log-v110 {
+        color: #2a5070 !important;
       }
       [data-theme="light"] #version-box .log-v109 {
         color: #2a5070 !important;
@@ -537,6 +540,7 @@
         margin-bottom: 28px;
         opacity: 0;
         animation: fadeUp 0.8s 1s ease forwards;
+        flex-wrap: nowrap;
       }
       .section-label h2 {
         font-family: var(--font-display);
@@ -1389,8 +1393,17 @@
             <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; text-align: center;">System Ledger / Version History</div>
             <div id="version-box" style="display: flex; flex-direction: column; gap: 24px; font-family: var(--font-mono); font-size: 0.78rem; max-width: 680px; max-height: 260px; overflow-y: auto; margin: 0 auto; line-height: 1.6; background: rgba(4, 14, 30, 0.3); border: 1px solid var(--border); border-radius: 12px; padding: 20px; padding-right: 24px;">
               <div>
-                <div style="color: var(--neon); font-weight: 700; margin-bottom: 6px;">[ v1.10 ] — Interface Interaction Refinement</div>
-                <ul class="log-v110" style="list-style-type: square; margin-left: 20px; color: var(--text); display: flex; flex-direction: column; gap: 4px;">
+                <div style="color: var(--neon); font-weight: 700; margin-bottom: 6px;">[ v1.11 ] — Visitor Telemetry Integration</div>
+                <ul class="log-v111" style="list-style-type: square; margin-left: 20px; color: var(--text); display: flex; flex-direction: column; gap: 4px;">
+                  <li>Deployed centralized cross-node visitor telemetry pipeline via Firebase Realtime Database under isolated aionyx-hub project instance.</li>
+                  <li>Integrated unified total_views counter accumulator across all active tool nodes — portal, generator-lj, konverter-terbilang, compress-zjpg.</li>
+                  <li>Mounted live visitor badge indicator inline within Tools Collection section label header.</li>
+                  <li>Fix Problem: Resolved duplicate statement injection in app.js execution thread causing runtime evaluation crash at line 347.</li>
+                </ul>
+              </div>
+              <div>
+                <div style="color: var(--cyan); font-weight: 700; margin-bottom: 6px;">[ v1.10 ] — Interface Interaction Refinement</div>
+                <ul class="log-v110" style="list-style-type: square; margin-left: 20px; color: var(--text-dim); display: flex; flex-direction: column; gap: 4px;">
                   <li>Engineered secondary cursor hover intent sensors with an extended 700ms activation delay across settings panels.</li>
                   <li>Isolated parameter selection click bubbling mechanics to successfully maintain panel visibility persistence during active runtime theme reconfiguration.</li>
                   <li>Fix Problem: Extracted duplicate scope identifiers causing core thread evaluation crashes and fully restored unstyled element fallbacks.</li>
@@ -1482,6 +1495,10 @@
       <div class="section-label" id="tools-label">
         <h2>Tools Collection</h2>
         <div class="label-line"></div>
+        <span id="online-count-hub" style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:0.7rem;color:#22c55e;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);padding:4px 12px;border-radius:100px;letter-spacing:0.05em;font-weight:600;white-space:nowrap;flex-shrink:0;">
+          <span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;display:inline-block;animation:pulse 2s ease-in-out infinite;"></span>
+          ... connecting
+        </span>
       </div>
 
       <div class="tools-grid" id="tools-grid">
@@ -1720,7 +1737,7 @@
           <div class="footer-col">
             <h3 class="footer-title">System</h3>
             <ul class="footer-links">
-              <li>📦 Version <span>v1.10</span></li>
+              <li>📦 Version <span>v1.11</span></li>
               <li>🛠 Status <span style="color: var(--cyan)">Active</span></li>
               <li>🌐 Independent Host</li>
               <li>🔒 No Trackers / Ads</li>
@@ -1786,6 +1803,26 @@
       ↑
     </button>
 
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script>
+      (function() {
+        const firebaseConfig = { databaseURL: "https://aionyx-hub-default-rtdb.asia-southeast1.firebasedatabase.app" };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+        const totalRef = db.ref("total_views");
+        totalRef.transaction(function(current) {
+          return (current || 0) + 1;
+        });
+        totalRef.on("value", function(snap) {
+          const el = document.getElementById("online-count-hub");
+          if (el) {
+            const count = snap.val() || 0;
+            el.innerHTML = '<span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;display:inline-block;"></span> ' + count.toLocaleString('id-ID') + ' visitors';
+          }
+        });
+      })();
+    </script>
     <script src="./app.js"></script>
     
   </body>
