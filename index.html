@@ -1819,7 +1819,15 @@
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
     <script>
       (function() {
-        const firebaseConfig = { databaseURL: "https://aionyx-hub-default-rtdb.asia-southeast1.firebasedatabase.app" };
+        const firebaseConfig = {
+          apiKey: "AIzaSyBsHwVX7XZtaO8LitvewXH3UYCVLGKvfZI",
+          authDomain: "aionyx-hub.firebaseapp.com",
+          databaseURL: "https://aionyx-hub-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "aionyx-hub",
+          storageBucket: "aionyx-hub.firebasestorage.app",
+          messagingSenderId: "812377833908",
+          appId: "1:812377833908:web:05be055c3ee929ccb9f2e1"
+        };
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
         const totalRef = db.ref("total_views");
