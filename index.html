@@ -4,22 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aionyx Hub - Free Web Tools by Zechron Aionyx</title>
-    <meta name="description" content="Aionyx Hub is a collection of free, browser-based web tools — image compressor, number to text converter, answer sheet generator, and more. No upload, no account needed." />
-    <meta name="keywords" content="aionyx hub, web tools, free online tools, compress image, compress jpg, konverter terbilang, generator lembar jawaban, tools gratis, Zechron Aionyx" />
+    <meta
+      name="description"
+      content="Aionyx Hub is a collection of free, browser-based web tools — image compressor, number to text converter, answer sheet generator, and more. No upload, no account needed."
+    />
+    <meta
+      name="keywords"
+      content="aionyx hub, web tools, free online tools, compress image, compress jpg, konverter terbilang, generator lembar jawaban, tools gratis, Zechron Aionyx"
+    />
     <meta name="author" content="Zechron Aionyx" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://aionyx-labs.github.io/aionyx-hub/" />
 
-    <meta property="og:title" content="Aionyx Hub - Free Web Tools by Zechron Aionyx" />
-    <meta property="og:description" content="A growing collection of free browser-based tools. Compress images, convert numbers to text, generate answer sheets — all without uploading anything to a server." />
+    <meta
+      property="og:title"
+      content="Aionyx Hub - Free Web Tools by Zechron Aionyx"
+    />
+    <meta
+      property="og:description"
+      content="A growing collection of free browser-based tools. Compress images, convert numbers to text, generate answer sheets — all without uploading anything to a server."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://aionyx-labs.github.io/aionyx-hub/" />
-    <meta property="og:image" content="https://aionyx-labs.github.io/aionyx-hub/logo-ax.png" />
+    <meta
+      property="og:url"
+      content="https://aionyx-labs.github.io/aionyx-hub/"
+    />
+    <meta
+      property="og:image"
+      content="https://aionyx-labs.github.io/aionyx-hub/logo-ax.png"
+    />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Aionyx Hub - Free Web Tools by Zechron Aionyx" />
-    <meta name="twitter:description" content="Free browser-based tools — image compressor, number converter, answer sheet generator, and more." />
-    <meta name="twitter:image" content="https://aionyx-labs.github.io/aionyx-hub/logo-ax.png" />
+    <meta
+      name="twitter:title"
+      content="Aionyx Hub - Free Web Tools by Zechron Aionyx"
+    />
+    <meta
+      name="twitter:description"
+      content="Free browser-based tools — image compressor, number converter, answer sheet generator, and more."
+    />
+    <meta
+      name="twitter:image"
+      content="https://aionyx-labs.github.io/aionyx-hub/logo-ax.png"
+    />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="manifest" href="./manifest.json" />
     <meta
@@ -101,13 +128,45 @@
         color: #7a9ab8;
       }
       [data-theme="light"] footer {
-        background: linear-gradient(to top, rgba(220, 230, 245, 0.6), transparent);
+        background: linear-gradient(
+          to top,
+          rgba(220, 230, 245, 0.6),
+          transparent
+        );
         border-top-color: rgba(14, 100, 180, 0.12);
       }
       [data-theme="light"] .tech-badge {
         background: rgba(255, 255, 255, 0.7);
         border-color: rgba(14, 100, 180, 0.15);
         color: #2a5070;
+      }
+      [data-theme="light"] .tech-badge:hover {
+        background: #ffffff;
+      }
+      [data-theme="light"] .tech-badge.html:hover {
+        border-color: #e34c26;
+        color: #b83616;
+        box-shadow: 0 4px 12px rgba(227, 76, 38, 0.12);
+      }
+      [data-theme="light"] .tech-badge.css:hover {
+        border-color: #264de4;
+        color: #1a3cb3;
+        box-shadow: 0 4px 12px rgba(38, 77, 228, 0.12);
+      }
+      [data-theme="light"] .tech-badge.js:hover {
+        border-color: #d4be11;
+        color: #736605;
+        box-shadow: 0 4px 12px rgba(212, 190, 17, 0.12);
+      }
+      [data-theme="light"] .tech-badge.firebase:hover {
+        border-color: #ffa000;
+        color: #c67c00;
+        box-shadow: 0 4px 12px rgba(255, 160, 0, 0.12);
+      }
+      [data-theme="light"] .tech-badge.github:hover {
+        border-color: #181717;
+        color: #181717;
+        box-shadow: 0 4px 12px rgba(24, 23, 23, 0.1);
       }
       [data-theme="light"] #toast {
         background: rgba(240, 245, 255, 0.97);
@@ -138,6 +197,14 @@
       [data-theme="light"] #version-box {
         background: rgba(14, 100, 180, 0.03) !important;
         border-color: rgba(14, 100, 180, 0.15) !important;
+      }
+      [data-theme="light"] .feedback-textarea {
+        background: #ffffff;
+        border-color: rgba(14, 100, 180, 0.25);
+        color: #0d1f35;
+      }
+      [data-theme="light"] .feedback-textarea::placeholder {
+        color: #7a9ab8;
       }
       .feedback-strip {
         border-top: 1px dashed var(--border);
@@ -172,8 +239,14 @@
         border-color: var(--cyan);
         color: var(--cyan);
       }
-      .feedback-btn.like:hover { border-color: #22c55e; color: #22c55e; }
-      .feedback-btn.dislike:hover { border-color: #ef4444; color: #ef4444; }
+      .feedback-btn.like:hover {
+        border-color: #22c55e;
+        color: #22c55e;
+      }
+      .feedback-btn.dislike:hover {
+        border-color: #ef4444;
+        color: #ef4444;
+      }
       .feedback-response {
         font-size: 0.82rem;
         color: var(--text-dim);
@@ -201,7 +274,9 @@
         outline: none;
         transition: border-color 0.2s;
       }
-      .feedback-textarea:focus { border-color: var(--cyan); }
+      .feedback-textarea:focus {
+        border-color: var(--cyan);
+      }
       .feedback-submit {
         background: transparent;
         border: 1px solid var(--cyan);
@@ -213,19 +288,92 @@
         font-family: var(--font-body);
         transition: all 0.2s;
       }
-      .feedback-submit:hover { background: var(--cyan); color: var(--void); }
-      .feedback-strip { border-top: 1px dashed var(--border); padding: 24px 0; display: flex; flex-direction: column; align-items: center; gap: 14px; }
-      .feedback-label { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; }
-      .feedback-btns { display: flex; gap: 12px; }
-      .feedback-btn { background: transparent; border: 1px solid var(--border); color: var(--text-dim); border-radius: 999px; padding: 7px 20px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); }
-      .feedback-btn.like:hover { border-color: #22c55e; color: #22c55e; }
-      .feedback-btn.dislike:hover { border-color: #ef4444; color: #ef4444; }
-      .feedback-response { font-size: 0.82rem; color: var(--text-dim); text-align: center; display: none; }
-      .feedback-dislike-form { display: none; flex-direction: column; align-items: center; gap: 10px; width: 100%; max-width: 420px; }
-      .feedback-textarea { width: 100%; background: rgba(4, 14, 30, 0.5); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; color: var(--text); font-family: var(--font-body); font-size: 0.82rem; resize: none; outline: none; transition: border-color 0.2s; }
-      .feedback-textarea:focus { border-color: var(--cyan); }
-      .feedback-submit { background: transparent; border: 1px solid var(--cyan); color: var(--cyan); border-radius: 999px; padding: 6px 20px; font-size: 0.82rem; cursor: pointer; font-family: var(--font-body); transition: all 0.2s; }
-      .feedback-submit:hover { background: var(--cyan); color: var(--void); }
+      .feedback-submit:hover {
+        background: var(--cyan);
+        color: var(--void);
+      }
+      .feedback-strip {
+        border-top: none;
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+      }
+      .feedback-label {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .feedback-btns {
+        display: flex;
+        gap: 12px;
+      }
+      .feedback-btn {
+        background: transparent;
+        border: 1px solid var(--border);
+        color: var(--text-dim);
+        border-radius: 999px;
+        padding: 7px 20px;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-family: var(--font-body);
+      }
+      .feedback-btn.like:hover {
+        border-color: #22c55e;
+        color: #22c55e;
+      }
+      .feedback-btn.dislike:hover {
+        border-color: #ef4444;
+        color: #ef4444;
+      }
+      .feedback-response {
+        font-size: 0.82rem;
+        color: var(--text-dim);
+        text-align: center;
+        display: none;
+      }
+      .feedback-dislike-form {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 420px;
+      }
+      .feedback-textarea {
+        width: 100%;
+        background: rgba(4, 14, 30, 0.5);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 10px 14px;
+        color: var(--text);
+        font-family: var(--font-body);
+        font-size: 0.82rem;
+        resize: none;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .feedback-textarea:focus {
+        border-color: var(--cyan);
+      }
+      .feedback-submit {
+        background: transparent;
+        border: 1px solid var(--cyan);
+        color: var(--cyan);
+        border-radius: 999px;
+        padding: 6px 20px;
+        font-size: 0.82rem;
+        cursor: pointer;
+        font-family: var(--font-body);
+        transition: all 0.2s;
+      }
+      .feedback-submit:hover {
+        background: var(--cyan);
+        color: var(--void);
+      }
       [data-theme="light"] #version-box .log-v113,
       [data-theme="light"] #version-box .log-v112 {
         color: #0d1f35 !important;
@@ -426,6 +574,11 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        cursor: default;
+        transition: filter 0.2s ease;
+      }
+      .logo:hover {
+        filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.6)) brightness(1.2);
       }
       .logo-mark {
         width: 32px;
@@ -437,7 +590,6 @@
         font-size: 0.75rem;
         font-weight: 700;
         color: var(--void);
-        box-shadow: var(--neon-glow);
         flex-shrink: 0;
       }
       .logo span {
@@ -464,7 +616,10 @@
         justify-content: center;
         cursor: pointer;
         font-size: 1rem;
-        transition: background 0.3s, border-color 0.3s, transform 0.2s;
+        transition:
+          background 0.3s,
+          border-color 0.3s,
+          transform 0.2s;
         outline: none;
         flex-shrink: 0;
       }
@@ -1020,6 +1175,11 @@
         align-items: center;
         gap: 10px;
         margin-bottom: 16px;
+        cursor: default;
+        transition: filter 0.2s ease;
+      }
+      .footer-brand:hover {
+        filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.6)) brightness(1.2);
       }
       .footer-brand span {
         font-family: var(--font-display);
@@ -1183,7 +1343,7 @@
       .tech-stack-container {
         margin-top: 40px;
         padding-top: 24px;
-        border-top: 1px solid rgba(32, 120, 200, 0.08);
+        border-top: none;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1262,8 +1422,8 @@
           grid-template-columns: 1fr;
         }
       }
-    
-    nav-menu {
+
+      nav-menu {
         display: flex;
         align-items: center;
         gap: 4px;
@@ -1281,7 +1441,9 @@
         padding: 8px 14px;
         border-radius: 8px;
         cursor: pointer;
-        transition: color 0.2s, background 0.2s;
+        transition:
+          color 0.2s,
+          background 0.2s;
         display: flex;
         align-items: center;
         gap: 5px;
@@ -1306,7 +1468,7 @@
         border-radius: 12px;
         padding: 8px;
         min-width: 160px;
-        box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
         z-index: 200;
         flex-direction: column;
         gap: 2px;
@@ -1326,7 +1488,9 @@
         border-radius: 8px;
         padding: 9px 12px;
         cursor: pointer;
-        transition: background 0.2s, color 0.2s;
+        transition:
+          background 0.2s,
+          color 0.2s;
         width: 100%;
         text-align: left;
       }
@@ -1374,7 +1538,9 @@
         border-radius: 8px;
         padding: 9px 12px;
         cursor: pointer;
-        transition: background 0.2s, color 0.2s;
+        transition:
+          background 0.2s,
+          color 0.2s;
         width: 100%;
         text-align: left;
       }
@@ -1421,27 +1587,112 @@
           <div class="nav-settings-wrap" id="nav-settings-wrap">
             <button class="nav-link nav-settings-btn" id="nav-settings-btn">
               Settings
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
             </button>
             <div class="settings-dropdown" id="settings-dropdown">
               <button class="settings-submenu-btn" id="submenu-theme-btn">
                 <span class="btn-label">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                  </svg>
                   Theme
                 </span>
-                <svg class="arrow-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg
+                  class="arrow-icon"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
               </button>
               <div class="settings-submenu-content" id="submenu-theme-content">
-                <button class="settings-option" data-theme-val="system" id="opt-system">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <button
+                  class="settings-option"
+                  data-theme-val="system"
+                  id="opt-system"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
                   System
                 </button>
-                <button class="settings-option" data-theme-val="light" id="opt-light">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <button
+                  class="settings-option"
+                  data-theme-val="light"
+                  id="opt-light"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                  </svg>
                   Light
                 </button>
-                <button class="settings-option" data-theme-val="dark" id="opt-dark">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <button
+                  class="settings-option"
+                  data-theme-val="dark"
+                  id="opt-dark"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                  </svg>
                   Dark
                 </button>
               </div>
@@ -1463,107 +1714,466 @@
         </h1>
         <div id="view-tools-desc">
           <p class="hero-desc">
-            Welcome to my <strong>Digital Workspace</strong>. A place where
-            code experiments become reality. Every tool here is born out of
-            real needs, built with absolute <strong>purpose</strong>.
+            Welcome to my <strong>Digital Workspace</strong>. A place where code
+            experiments become reality. Every tool here is born out of real
+            needs, built with absolute <strong>purpose</strong>.
           </p>
         </div>
-        <div id="view-about-desc" style="display: none; max-width: 820px; margin: 0 auto 48px; animation: fadeUp 0.6s ease forwards;">
-          <div style="display: flex; justify-content: center; margin-bottom: 24px;">
-            <svg width="100%" height="60" viewBox="0 0 600 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity: 0.4;">
-              <line x1="0" y1="30" x2="600" y2="30" stroke="var(--border)" stroke-width="0.75"/>
-              <line x1="300" y1="0" x2="300" y2="60" stroke="var(--cyan-dim)" stroke-width="1"/>
-              <circle cx="300" cy="30" r="4" fill="var(--neon)"/>
-              <path d="M 285 15 L 300 30 L 315 15" stroke="var(--cyan)" stroke-width="1" fill="none"/>
+        <div
+          id="view-about-desc"
+          style="
+            display: none;
+            max-width: 820px;
+            margin: 0 auto 48px;
+            animation: fadeUp 0.6s ease forwards;
+          "
+        >
+          <div
+            style="display: flex; justify-content: center; margin-bottom: 24px"
+          >
+            <svg
+              width="100%"
+              height="60"
+              viewBox="0 0 600 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style="opacity: 0.4"
+            >
+              <line
+                x1="0"
+                y1="30"
+                x2="600"
+                y2="30"
+                stroke="var(--border)"
+                stroke-width="0.75"
+              />
+              <line
+                x1="300"
+                y1="0"
+                x2="300"
+                y2="60"
+                stroke="var(--cyan-dim)"
+                stroke-width="1"
+              />
+              <circle cx="300" cy="30" r="4" fill="var(--neon)" />
+              <path
+                d="M 285 15 L 300 30 L 315 15"
+                stroke="var(--cyan)"
+                stroke-width="1"
+                fill="none"
+              />
             </svg>
           </div>
-          <p style="font-size: 1.02rem; line-height: 1.8; color: var(--text); margin-bottom: 20px; font-weight: 400; letter-spacing: 0.01em; text-align: center;">
-            Aionyx Hub constitutes an independent digital architecture engineered to optimize operational efficiency, systematic self-regulation, and individual accountability. It functions as a centralized repository for analytical utilities designed to resolve precise technical requirements without systemic redundancy.
+          <p
+            style="
+              font-size: 1.02rem;
+              line-height: 1.8;
+              color: var(--text);
+              margin-bottom: 20px;
+              font-weight: 400;
+              letter-spacing: 0.01em;
+              text-align: center;
+            "
+          >
+            Aionyx Hub constitutes an independent digital architecture
+            engineered to optimize operational efficiency, systematic
+            self-regulation, and individual accountability. It functions as a
+            centralized repository for analytical utilities designed to resolve
+            precise technical requirements without systemic redundancy.
           </p>
-          <p style="font-size: 0.9rem; line-height: 1.75; color: var(--text-dim); margin-bottom: 24px; font-weight: 300; text-align: center;">
-            The development of each instrument within this ecosystem adheres strictly to structural clarity, objective causality, and the complete mitigation of non-essential complexity. By deliberately isolating execution paths from external social metrics and subjective discourse, the platform ensures consistent performance stability and absolute functional utility.
+          <p
+            style="
+              font-size: 0.9rem;
+              line-height: 1.75;
+              color: var(--text-dim);
+              margin-bottom: 24px;
+              font-weight: 300;
+              text-align: center;
+            "
+          >
+            The development of each instrument within this ecosystem adheres
+            strictly to structural clarity, objective causality, and the
+            complete mitigation of non-essential complexity. By deliberately
+            isolating execution paths from external social metrics and
+            subjective discourse, the platform ensures consistent performance
+            stability and absolute functional utility.
           </p>
-          <p style="font-size: 0.9rem; line-height: 1.7; color: var(--cyan-bright); font-style: italic; font-weight: 400; text-align: center;">
-            "Objective internal evaluation yields significantly higher systemic value than speculative external discourse. Structural consistency remains the definitive metric of operational integrity."
+          <p
+            style="
+              font-size: 0.9rem;
+              line-height: 1.7;
+              color: var(--cyan-bright);
+              font-style: italic;
+              font-weight: 400;
+              text-align: center;
+            "
+          >
+            "Objective internal evaluation yields significantly higher systemic
+            value than speculative external discourse. Structural consistency
+            remains the definitive metric of operational integrity."
           </p>
-          <div style="margin-top: 40px; border-top: 1px dashed var(--border); padding-top: 32px; text-align: left;">
-            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; text-align: center;">System Ledger / Version History</div>
-            <div id="version-box" style="display: flex; flex-direction: column; gap: 24px; font-family: var(--font-mono); font-size: 0.78rem; max-width: 680px; max-height: 260px; overflow-y: auto; margin: 0 auto; line-height: 1.6; background: rgba(4, 14, 30, 0.3); border: 1px solid var(--border); border-radius: 12px; padding: 20px; padding-right: 24px;">
+          <div
+            style="
+              margin-top: 40px;
+              border-top: 1px dashed var(--border);
+              padding-top: 32px;
+              text-align: left;
+            "
+          >
+            <div
+              style="
+                font-family: var(--font-mono);
+                font-size: 0.72rem;
+                color: var(--cyan);
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                margin-bottom: 24px;
+                text-align: center;
+              "
+            >
+              System Ledger / Version History
+            </div>
+            <div
+              id="version-box"
+              style="
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                font-family: var(--font-mono);
+                font-size: 0.78rem;
+                max-width: 680px;
+                max-height: 260px;
+                overflow-y: auto;
+                margin: 0 auto;
+                line-height: 1.6;
+                background: rgba(4, 14, 30, 0.3);
+                border: 1px solid var(--border);
+                border-radius: 12px;
+                padding: 20px;
+                padding-right: 24px;
+              "
+            >
               <div>
-                <div style="color: var(--neon); font-weight: 700; margin-bottom: 6px;">[ v1.13 ] — Visitor Counter Fix & Upload Format Guard</div>
-                <ul class="log-v113" style="list-style-type: square; margin-left: 20px; color: var(--text); display: flex; flex-direction: column; gap: 4px;">
-                  <li>Fixed visitor counter incorrectly resetting to 1 on every page refresh — now shows accurate total across all visits.</li>
-                  <li>Visitor count now loads the correct real-time value immediately on page open.</li>
-                  <li>Compress ZJPG now only accepts JPG, JPEG, PNG, and WEBP — unsupported formats are blocked with an inline error notice.</li>
-                  <li>Updated Compress ZJPG tool description to clearly list all supported formats.</li>
+                <div
+                  style="
+                    color: var(--neon);
+                    font-weight: 700;
+                    margin-bottom: 6px;
+                  "
+                >
+                  [ v1.13 ] — Visitor Counter Fix & Upload Format Guard
+                </div>
+                <ul
+                  class="log-v113"
+                  style="
+                    list-style-type: square;
+                    margin-left: 20px;
+                    color: var(--text);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                  "
+                >
+                  <li>
+                    Fixed visitor counter incorrectly resetting to 1 on every
+                    page refresh — now shows accurate total across all visits.
+                  </li>
+                  <li>
+                    Visitor count now loads the correct real-time value
+                    immediately on page open.
+                  </li>
+                  <li>
+                    Compress ZJPG now only accepts JPG, JPEG, PNG, and WEBP —
+                    unsupported formats are blocked with an inline error notice.
+                  </li>
+                  <li>
+                    Updated Compress ZJPG tool description to clearly list all
+                    supported formats.
+                  </li>
                 </ul>
               </div>
               <div>
-                <div style="color: var(--cyan); font-weight: 700; margin-bottom: 6px;">[ v1.12 ] — Visitor Counter Across All Tools</div>
-                <ul class="log-v112" style="list-style-type: square; margin-left: 20px; color: var(--text-dim); display: flex; flex-direction: column; gap: 4px;">
-                  <li>Visitor count is now tracked across all tools — every visit to any tool contributes to the total portal counter.</li>
-                  <li>Version history is now centralized exclusively on the main portal — individual tools no longer show version tags.</li>
+                <div
+                  style="
+                    color: var(--cyan);
+                    font-weight: 700;
+                    margin-bottom: 6px;
+                  "
+                >
+                  [ v1.12 ] — Visitor Counter Across All Tools
+                </div>
+                <ul
+                  class="log-v112"
+                  style="
+                    list-style-type: square;
+                    margin-left: 20px;
+                    color: var(--text-dim);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                  "
+                >
+                  <li>
+                    Visitor count is now tracked across all tools — every visit
+                    to any tool contributes to the total portal counter.
+                  </li>
+                  <li>
+                    Version history is now centralized exclusively on the main
+                    portal — individual tools no longer show version tags.
+                  </li>
                 </ul>
               </div>
               <div>
-                <div style="color: var(--cyan); font-weight: 700; margin-bottom: 6px;">[ v1.11 ] — Live Visitor Counter</div>
-                <ul class="log-v111" style="list-style-type: square; margin-left: 20px; color: var(--text-dim); display: flex; flex-direction: column; gap: 4px;">
-                  <li>Added a live visitor counter badge visible in the Tools Collection section.</li>
-                  <li>Counter is shared and synced in real-time across all active tool pages.</li>
-                  <li>Fixed a bug causing the page to crash on load in certain conditions.</li>
+                <div
+                  style="
+                    color: var(--cyan);
+                    font-weight: 700;
+                    margin-bottom: 6px;
+                  "
+                >
+                  [ v1.11 ] — Live Visitor Counter
+                </div>
+                <ul
+                  class="log-v111"
+                  style="
+                    list-style-type: square;
+                    margin-left: 20px;
+                    color: var(--text-dim);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                  "
+                >
+                  <li>
+                    Added a live visitor counter badge visible in the Tools
+                    Collection section.
+                  </li>
+                  <li>
+                    Counter is shared and synced in real-time across all active
+                    tool pages.
+                  </li>
+                  <li>
+                    Fixed a bug causing the page to crash on load in certain
+                    conditions.
+                  </li>
                 </ul>
               </div>
               <div>
-                <div style="color: var(--cyan); font-weight: 700; margin-bottom: 6px;">[ v1.10 ] — Settings Panel Improvement</div>
-                <ul class="log-v110" style="list-style-type: square; margin-left: 20px; color: var(--text-dim); display: flex; flex-direction: column; gap: 4px;">
-                  <li>Settings panel now opens with a smooth hover delay — less accidental triggers.</li>
-                  <li>Theme selection no longer closes the panel unexpectedly while switching.</li>
-                  <li>Fixed a crash that occurred when the settings panel was opened in certain states.</li>
+                <div
+                  style="
+                    color: var(--cyan);
+                    font-weight: 700;
+                    margin-bottom: 6px;
+                  "
+                >
+                  [ v1.10 ] — Settings Panel Improvement
+                </div>
+                <ul
+                  class="log-v110"
+                  style="
+                    list-style-type: square;
+                    margin-left: 20px;
+                    color: var(--text-dim);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                  "
+                >
+                  <li>
+                    Settings panel now opens with a smooth hover delay — less
+                    accidental triggers.
+                  </li>
+                  <li>
+                    Theme selection no longer closes the panel unexpectedly
+                    while switching.
+                  </li>
+                  <li>
+                    Fixed a crash that occurred when the settings panel was
+                    opened in certain states.
+                  </li>
                 </ul>
               </div>
               <div>
-                <div style="color: var(--cyan); font-weight: 700; margin-bottom: 6px;">[ v1.09 ] — About Page & UI Polish</div>
-                <ul class="log-v109" style="list-style-type: square; margin-left: 20px; color: var(--text-dim); display: flex; flex-direction: column; gap: 4px;">
-                  <li>Redesigned the About section with a cleaner layout and added visual graphics.</li>
-                  <li>Scroll-to-top button now appears at a more natural scroll position.</li>
-                  <li>Fixed a scroll position bug when switching between navigation views.</li>
+                <div
+                  style="
+                    color: var(--cyan);
+                    font-weight: 700;
+                    margin-bottom: 6px;
+                  "
+                >
+                  [ v1.09 ] — About Page & UI Polish
+                </div>
+                <ul
+                  class="log-v109"
+                  style="
+                    list-style-type: square;
+                    margin-left: 20px;
+                    color: var(--text-dim);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                  "
+                >
+                  <li>
+                    Redesigned the About section with a cleaner layout and added
+                    visual graphics.
+                  </li>
+                  <li>
+                    Scroll-to-top button now appears at a more natural scroll
+                    position.
+                  </li>
+                  <li>
+                    Fixed a scroll position bug when switching between
+                    navigation views.
+                  </li>
                 </ul>
               </div>
               <div>
-                <div style="color: var(--cyan-dim); font-weight: 700; margin-bottom: 6px;">[ v1.08 ] — Mobile Layout Fix</div>
-                <ul class="log-v108" style="list-style-type: square; margin-left: 20px; color: var(--text-muted); display: flex; flex-direction: column; gap: 4px;">
-                  <li>Layout now stretches correctly to full screen width on all screen sizes.</li>
-                  <li>Fixed horizontal overflow issue causing unwanted side-scroll on mobile devices.</li>
+                <div
+                  style="
+                    color: var(--cyan-dim);
+                    font-weight: 700;
+                    margin-bottom: 6px;
+                  "
+                >
+                  [ v1.08 ] — Mobile Layout Fix
+                </div>
+                <ul
+                  class="log-v108"
+                  style="
+                    list-style-type: square;
+                    margin-left: 20px;
+                    color: var(--text-muted);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                  "
+                >
+                  <li>
+                    Layout now stretches correctly to full screen width on all
+                    screen sizes.
+                  </li>
+                  <li>
+                    Fixed horizontal overflow issue causing unwanted side-scroll
+                    on mobile devices.
+                  </li>
                 </ul>
               </div>
               <div>
-                <div style="color: var(--text-muted); font-weight: 700; margin-bottom: 6px;">[ v1.05 ] — Security Hardening</div>
-                <ul class="log-v105" style="list-style-type: square; margin-left: 20px; color: var(--text-muted); display: flex; flex-direction: column; gap: 4px;">
-                  <li>Added protections to prevent content copying and right-click inspection on the portal.</li>
-                  <li>Strengthened security policies to block unauthorized script execution.</li>
+                <div
+                  style="
+                    color: var(--text-muted);
+                    font-weight: 700;
+                    margin-bottom: 6px;
+                  "
+                >
+                  [ v1.05 ] — Security Hardening
+                </div>
+                <ul
+                  class="log-v105"
+                  style="
+                    list-style-type: square;
+                    margin-left: 20px;
+                    color: var(--text-muted);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                  "
+                >
+                  <li>
+                    Added protections to prevent content copying and right-click
+                    inspection on the portal.
+                  </li>
+                  <li>
+                    Strengthened security policies to block unauthorized script
+                    execution.
+                  </li>
                 </ul>
               </div>
               <div>
-                <div style="color: var(--text-muted); font-weight: 700; margin-bottom: 6px;">[ v1.00 ] — Core Architecture Initialized</div>
-                <ul class="log-v100" style="list-style-type: square; margin-left: 20px; color: var(--text-muted); display: flex; flex-direction: column; gap: 4px;">
-                  <li>Established primary utility micro-grid operational layout paradigms and container frame elements.</li>
-                  <li>Integrated centralized localized client storage interface triggers to maintain visual parameter persistence.</li>
-                  <li>Successfully deployed the initial tier-1 operational micro-services layer.</li>
+                <div
+                  style="
+                    color: var(--text-muted);
+                    font-weight: 700;
+                    margin-bottom: 6px;
+                  "
+                >
+                  [ v1.00 ] — Core Architecture Initialized
+                </div>
+                <ul
+                  class="log-v100"
+                  style="
+                    list-style-type: square;
+                    margin-left: 20px;
+                    color: var(--text-muted);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                  "
+                >
+                  <li>
+                    Established primary utility micro-grid operational layout
+                    paradigms and container frame elements.
+                  </li>
+                  <li>
+                    Integrated centralized localized client storage interface
+                    triggers to maintain visual parameter persistence.
+                  </li>
+                  <li>
+                    Successfully deployed the initial tier-1 operational
+                    micro-services layer.
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <div id="view-privacy-desc" style="display: none; max-width: 820px; margin: 0 auto 48px; animation: fadeUp 0.6s ease forwards;">
-          <div class="section-label" style="margin-bottom: 28px;">
+        <div
+          id="view-privacy-desc"
+          style="
+            display: none;
+            max-width: 820px;
+            margin: 0 auto 48px;
+            animation: fadeUp 0.6s ease forwards;
+          "
+        >
+          <div class="section-label" style="margin-bottom: 28px">
             <h2>Privacy Architecture</h2>
             <div class="label-line"></div>
           </div>
-          <p style="font-size: 1.02rem; line-height: 1.8; color: var(--text); margin-bottom: 20px; font-weight: 400; letter-spacing: 0.01em; text-align: justify;">
-            This node enforces a zero-telemetry environment mandate. No persistent user tracking mechanisms, telemetry scripts, or external behavioral profiling vectors are deployed within this domain. All computational pipelines executed by the hosted utility modules operate strictly within the client-side sandbox container of the local browser runtime framework.
+          <p
+            style="
+              font-size: 1.02rem;
+              line-height: 1.8;
+              color: var(--text);
+              margin-bottom: 20px;
+              font-weight: 400;
+              letter-spacing: 0.01em;
+              text-align: justify;
+            "
+          >
+            This node enforces a zero-telemetry environment mandate. No
+            persistent user tracking mechanisms, telemetry scripts, or external
+            behavioral profiling vectors are deployed within this domain. All
+            computational pipelines executed by the hosted utility modules
+            operate strictly within the client-side sandbox container of the
+            local browser runtime framework.
           </p>
-          <p style="font-size: 0.9rem; line-height: 1.75; color: var(--text-dim); margin-bottom: 24px; font-weight: 300; text-align: justify;">
-            Localized preference persistence—specifically the indexing of interface theme variables—utilizes strict browser local storage mechanisms exclusively. Data storage is completely decentralized, sandboxed, and isolated from external networks. No session logs or structured identifiers are transmitted to remote cloud databases.
+          <p
+            style="
+              font-size: 0.9rem;
+              line-height: 1.75;
+              color: var(--text-dim);
+              margin-bottom: 24px;
+              font-weight: 300;
+              text-align: justify;
+            "
+          >
+            Localized preference persistence—specifically the indexing of
+            interface theme variables—utilizes strict browser local storage
+            mechanisms exclusively. Data storage is completely decentralized,
+            sandboxed, and isolated from external networks. No session logs or
+            structured identifiers are transmitted to remote cloud databases.
           </p>
         </div>
 
@@ -1604,8 +2214,36 @@
       <div class="section-label" id="tools-label">
         <h2>Tools Collection</h2>
         <div class="label-line"></div>
-        <span id="online-count-hub" style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:0.7rem;color:#22c55e;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);padding:4px 12px;border-radius:100px;letter-spacing:0.05em;font-weight:600;white-space:nowrap;flex-shrink:0;">
-          <span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;display:inline-block;animation:pulse 2s ease-in-out infinite;"></span>
+        <span
+          id="online-count-hub"
+          style="
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: #22c55e;
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.25);
+            padding: 4px 12px;
+            border-radius: 100px;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+          "
+        >
+          <span
+            style="
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background: #22c55e;
+              box-shadow: 0 0 6px #22c55e;
+              display: inline-block;
+              animation: pulse 2s ease-in-out infinite;
+            "
+          ></span>
           ... connecting
         </span>
       </div>
@@ -1640,8 +2278,6 @@
               <a
                 href="https://aionyx-labs.github.io/generator-lj/"
                 class="btn-launch"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Open
                 <svg
@@ -1681,8 +2317,6 @@
               <a
                 href="https://aionyx-labs.github.io/konverter-terbilang/"
                 class="btn-launch"
-                target="_blank"
-                rel="noopener noreferrer"
                 >Open
                 <svg
                   width="14"
@@ -1699,7 +2333,10 @@
         </div>
 
         <!-- ─── TOOL AKTIF: Compress ZJPG ─── -->
-        <div class="card-wrapper" data-name="compress zjpg image photo compressor jpg png webp">
+        <div
+          class="card-wrapper"
+          data-name="compress zjpg image photo compressor jpg png webp"
+        >
           <div class="card card-active">
             <div class="card-corner"></div>
             <div class="card-header">
@@ -1710,10 +2347,24 @@
               </div>
             </div>
             <p class="card-desc">
-              Kompres gambar ke ukuran target (KB/MB) langsung di browser. Mendukung format JPG, JPEG, PNG, dan WEBP.
+              Kompres gambar ke ukuran target (KB/MB) langsung di browser.
+              Mendukung format JPG, JPEG, PNG, dan WEBP.
             </p>
             <div class="card-footer">
-              <a href="https://aionyx-labs.github.io/compress-zjpg/" class="btn-launch" target="_blank" rel="noopener noreferrer">Open <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10" /></svg></a>
+              <a
+                href="https://aionyx-labs.github.io/compress-zjpg/"
+                class="btn-launch"
+                >Open
+                <svg
+                  width="14"
+                  height="14"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M7 17L17 7M17 7H7M17 7v10" /></svg
+              ></a>
             </div>
           </div>
         </div>
@@ -1770,7 +2421,8 @@
               </div>
             </div>
             <p class="card-desc">
-              Jika Anda punya ide tool yang bakal berguna? Isikan form di bawah !
+              Jika Anda punya ide tool yang bakal berguna? Isikan form di bawah
+              !
             </p>
             <div class="request-form">
               <input
@@ -1795,10 +2447,7 @@
                 tabindex="-1"
                 autocomplete="off"
               />
-              <button
-                class="btn-request"
-                id="btn-request"
-              >
+              <button class="btn-request" id="btn-request">
                 <svg
                   width="15"
                   height="15"
@@ -1865,7 +2514,13 @@
                 >
               </li>
               <li>
-                🔒 <a href="javascript:void(0)" id="privacy-link" style="cursor: pointer;">Privacy Policy</a>
+                🔒
+                <a
+                  href="javascript:void(0)"
+                  id="privacy-link"
+                  style="cursor: pointer"
+                  >Privacy Policy</a
+                >
               </li>
               <li style="line-height: 1.5">
                 💡 Punya ide tool? Usulkan lewat form di atas.
@@ -1878,23 +2533,45 @@
           <div class="tech-stack-title">Powering This Node</div>
           <div class="tech-badges">
             <div class="tech-badge html">
-              <svg viewBox="0 0 24 24"><path d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2zM18.7 5H5.3l.4 4.8h12.1zm-11.3 6.8l.2 2.7 4.4 1.2 4.4-1.2.3-3.7H7.1z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2zM18.7 5H5.3l.4 4.8h12.1zm-11.3 6.8l.2 2.7 4.4 1.2 4.4-1.2.3-3.7H7.1z"
+                />
+              </svg>
               HTML5
             </div>
             <div class="tech-badge css">
-              <svg viewBox="0 0 24 24"><path d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2zM12 4.8v4.8H7.6l-.2-2.4H12zm4.1 4.8l-.3 3.7-3.8 1v-4.7h4.1z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2zM12 4.8v4.8H7.6l-.2-2.4H12zm4.1 4.8l-.3 3.7-3.8 1v-4.7h4.1z"
+                />
+              </svg>
               CSS3
             </div>
             <div class="tech-badge js">
-              <svg viewBox="0 0 24 24"><path d="M24 24H0V0h24v24z" fill="none"/><path d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2z" fill="none"/><path d="M12 18.5c2.5 0 4-1.3 4-3.5 0-2-1.5-3-3.5-3.5-1.5-.3-2-.8-2-1.5 0-.6.5-1.1 1.5-1.1 1.1 0 1.6.5 1.7 1.5h2.3c-.1-2.1-1.6-3.4-4-3.4-2.3 0-3.8 1.3-3.8 3.3 0 1.9 1.2 2.8 3.3 3.3 1.6.4 2.2.8 2.2 1.6 0 .8-.6 1.3-1.7 1.3-1.3 0-2-.7-2.1-1.8H6.2c.1 2.3 1.7 3.8 5.8 3.8z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M24 24H0V0h24v24z" fill="none" />
+                <path d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2z" fill="none" />
+                <path
+                  d="M12 18.5c2.5 0 4-1.3 4-3.5 0-2-1.5-3-3.5-3.5-1.5-.3-2-.8-2-1.5 0-.6.5-1.1 1.5-1.1 1.1 0 1.6.5 1.7 1.5h2.3c-.1-2.1-1.6-3.4-4-3.4-2.3 0-3.8 1.3-3.8 3.3 0 1.9 1.2 2.8 3.3 3.3 1.6.4 2.2.8 2.2 1.6 0 .8-.6 1.3-1.7 1.3-1.3 0-2-.7-2.1-1.8H6.2c.1 2.3 1.7 3.8 5.8 3.8z"
+                />
+              </svg>
               JavaScript
             </div>
             <div class="tech-badge firebase">
-              <svg viewBox="0 0 24 24"><path d="M3.9 8.3l8.1-8.1c.3-.3.8-.3 1.1 0l1.8 1.8zM19.9 14.8l-2.4-4.8-1.5-3L13 1l-.2-.1c-.4-.2-.8-.1-1.1.2L3.3 16.5c-.3.4-.2 1 .3 1.2l7.9 4.4c.3.2.7.2 1 0l8.1-4.5c.5-.3.6-.9.3-1.4z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M3.9 8.3l8.1-8.1c.3-.3.8-.3 1.1 0l1.8 1.8zM19.9 14.8l-2.4-4.8-1.5-3L13 1l-.2-.1c-.4-.2-.8-.1-1.1.2L3.3 16.5c-.3.4-.2 1 .3 1.2l7.9 4.4c.3.2.7.2 1 0l8.1-4.5c.5-.3.6-.9.3-1.4z"
+                />
+              </svg>
               Firebase
             </div>
             <div class="tech-badge github">
-              <svg viewBox="0 0 24 24"><path d="M12 .3C5.4.3 0 5.7 0 12.4c0 5.3 3.5 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 2.5 18.3 2.8 18.3 2.8c.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 .3C5.4.3 0 5.7 0 12.4c0 5.3 3.5 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 2.5 18.3 2.8 18.3 2.8c.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"
+                />
+              </svg>
               GitHub
             </div>
           </div>
@@ -1903,26 +2580,24 @@
         <div class="feedback-strip" id="feedback-strip">
           <div class="feedback-label">Was this portal helpful?</div>
           <div class="feedback-btns" id="feedback-btns">
-            <button class="feedback-btn like" id="feedback-like">👍 Helpful</button>
-            <button class="feedback-btn dislike" id="feedback-dislike">👎 Not really</button>
+            <button class="feedback-btn like" id="feedback-like">
+              👍 Helpful
+            </button>
+            <button class="feedback-btn dislike" id="feedback-dislike">
+              👎 Not really
+            </button>
           </div>
           <div class="feedback-response" id="feedback-response"></div>
           <div class="feedback-dislike-form" id="feedback-dislike-form">
-            <textarea class="feedback-textarea" id="feedback-text" rows="3" placeholder="What could be better? (optional)"></textarea>
-            <button class="feedback-submit" id="feedback-submit">Send Feedback</button>
-          </div>
-        </div>
-
-        <div class="feedback-strip" id="feedback-strip">
-          <div class="feedback-label">Was this portal helpful?</div>
-          <div class="feedback-btns" id="feedback-btns">
-            <button class="feedback-btn like" id="feedback-like">👍 Helpful</button>
-            <button class="feedback-btn dislike" id="feedback-dislike">👎 Not really</button>
-          </div>
-          <div class="feedback-response" id="feedback-response"></div>
-          <div class="feedback-dislike-form" id="feedback-dislike-form">
-            <textarea class="feedback-textarea" id="feedback-text" rows="3" placeholder="What could be better? (optional)"></textarea>
-            <button class="feedback-submit" id="feedback-submit">Send Feedback</button>
+            <textarea
+              class="feedback-textarea"
+              id="feedback-text"
+              rows="3"
+              placeholder="What could be better? (optional)"
+            ></textarea>
+            <button class="feedback-submit" id="feedback-submit">
+              Send Feedback
+            </button>
           </div>
         </div>
 
@@ -1930,26 +2605,26 @@
           © 2026 <span>Zechron Aionyx</span> · Aionyx Hub · All tools
           handcrafted &amp; self-hosted
         </div>
+      </div>
     </footer>
 
     <!-- TOAST -->
     <div id="toast"></div>
-    <button id="scroll-top" aria-label="Scroll to top">
-      ↑
-    </button>
+    <button id="scroll-top" aria-label="Scroll to top">↑</button>
 
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
     <script>
-      (function() {
+      (function () {
         const firebaseConfig = {
           apiKey: "AIzaSyBsHwVX7XZtaO8LitvewXH3UYCVLGKvfZI",
           authDomain: "aionyx-hub.firebaseapp.com",
-          databaseURL: "https://aionyx-hub-default-rtdb.asia-southeast1.firebasedatabase.app",
+          databaseURL:
+            "https://aionyx-hub-default-rtdb.asia-southeast1.firebasedatabase.app",
           projectId: "aionyx-hub",
           storageBucket: "aionyx-hub.firebasestorage.app",
           messagingSenderId: "812377833908",
-          appId: "1:812377833908:web:05be055c3ee929ccb9f2e1"
+          appId: "1:812377833908:web:05be055c3ee929ccb9f2e1",
         };
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
@@ -1960,31 +2635,39 @@
         const INTERVAL = 30 * 60 * 1000;
         if (!lastVisit || now - parseInt(lastVisit) > INTERVAL) {
           localStorage.setItem("aionyx_last_visit", now.toString());
-          totalRef.transaction(function(current) {
-            return (current || 0) + 1;
-          }, function(error, committed) {
-            if (!error && committed) {
-              totalRef.once("value", function(snap) {
-                const el = document.getElementById("online-count-hub");
-                if (el) {
-                  const count = snap.val() || 0;
-                  el.innerHTML = '<span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;display:inline-block;"></span> ' + count.toLocaleString('id-ID') + ' visitors';
-                }
-              });
-            }
-          });
+          totalRef.transaction(
+            function (current) {
+              return (current || 0) + 1;
+            },
+            function (error, committed) {
+              if (!error && committed) {
+                totalRef.once("value", function (snap) {
+                  const el = document.getElementById("online-count-hub");
+                  if (el) {
+                    const count = snap.val() || 0;
+                    el.innerHTML =
+                      '<span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;display:inline-block;"></span> ' +
+                      count.toLocaleString("id-ID") +
+                      " visitors";
+                  }
+                });
+              }
+            },
+          );
         } else {
-          totalRef.once("value", function(snap) {
+          totalRef.once("value", function (snap) {
             const el = document.getElementById("online-count-hub");
             if (el) {
               const count = snap.val() || 0;
-              el.innerHTML = '<span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;display:inline-block;"></span> ' + count.toLocaleString('id-ID') + ' visitors';
+              el.innerHTML =
+                '<span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;display:inline-block;"></span> ' +
+                count.toLocaleString("id-ID") +
+                " visitors";
             }
           });
         }
       })();
     </script>
     <script src="./app.js"></script>
-    
   </body>
 </html>
