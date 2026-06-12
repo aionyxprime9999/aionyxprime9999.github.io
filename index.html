@@ -1837,16 +1837,33 @@
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
         const totalRef = db.ref("total_views");
-        totalRef.transaction(function(current) {
-          return (current || 0) + 1;
-        });
-        totalRef.on("value", function(snap) {
-          const el = document.getElementById("online-count-hub");
-          if (el) {
-            const count = snap.val() || 0;
-            el.innerHTML = '<span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;display:inline-block;"></span> ' + count.toLocaleString('id-ID') + ' visitors';
-          }
-        });
+        const now = Date.now();
+        const lastVisit = localStorage.getItem("aionyx_last_visit");
+        const INTERVAL = 30 * 60 * 1000;
+        if (!lastVisit || now - parseInt(lastVisit) > INTERVAL) {
+          localStorage.setItem("aionyx_last_visit", now.toString());
+          totalRef.transaction(function(current) {
+            return (current || 0) + 1;
+          }, function(error, committed) {
+            if (!error && committed) {
+              totalRef.once("value", function(snap) {
+                const el = document.getElementById("online-count-hub");
+                if (el) {
+                  const count = snap.val() || 0;
+                  el.innerHTML = '<span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;display:inline-block;"></span> ' + count.toLocaleString('id-ID') + ' visitors';
+                }
+              });
+            }
+          });
+        } else {
+          totalRef.once("value", function(snap) {
+            const el = document.getElementById("online-count-hub");
+            if (el) {
+              const count = snap.val() || 0;
+              el.innerHTML = '<span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;display:inline-block;"></span> ' + count.toLocaleString('id-ID') + ' visitors';
+            }
+          });
+        }
       })();
     </script>
     <script src="./app.js"></script>
