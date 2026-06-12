@@ -1,4 +1,4 @@
-const CACHE_NAME = "ax-hub-v6";
+const CACHE_NAME = "ax-hub-v7";
 const ALLOWED_ORIGINS = [
   "https://fonts.googleapis.com",
   "https://fonts.gstatic.com",
@@ -13,8 +13,12 @@ self.addEventListener("install", (e) => {
         cache.addAll([
           "./index.html",
           "./app.js",
+          "./style.css",
           "./offline.html",
           "./logo-ax.png",
+          "./logo-generatorlj.png",
+          "./logo-kb.png",
+          "./logo-zjpg.png",
           "./favicon.png",
           "./manifest.json",
         ]),
@@ -38,7 +42,11 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   const isFont = ALLOWED_ORIGINS.some((o) => e.request.url.startsWith(o));
   const isStaticAsset =
+    e.request.url.includes("style.css") ||
     e.request.url.includes("logo-ax.png") ||
+    e.request.url.includes("logo-generatorlj.png") ||
+    e.request.url.includes("logo-kb.png") ||
+    e.request.url.includes("logo-zjpg.png") ||
     e.request.url.includes("manifest.json") ||
     e.request.url.includes("app.js") ||
     e.request.url.includes("favicon.png") ||
